@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>funding</td>
-      <td>23 Aug 2021, 12:34</td>
+      <td>02 Nov 2021, 01:40</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@miroUserValidation</td>
-          <td      class="passed"    >17</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >2</td>
+          <td      class="failed"    >2</td>
+          <td     class="skipped"   >13</td>
           <td >0</td>
           <td >0</td>
           <td class="total">17</td>
 
-          <td  class="passed"    >2</td>
           <td >0</td>
+          <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="230839593900">3:50.839</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="18255436500">18.255</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -183,12 +183,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1:43.910</span>
+  <span class="lead-duration duration">9.879</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">validate miro board sticker creation for multiple users</span>
 
@@ -199,7 +199,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
@@ -221,7 +221,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.miro.whiteboard.steps.Setup.setup(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">5.986</span>
+  <span class="lead-duration duration">3.570</span>
 
           </div>
 
@@ -238,9 +238,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -250,7 +250,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -258,7 +258,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">I navigate to the miro page</span>
 
-  <span class="lead-duration duration">5.570</span>
+  <span class="lead-duration duration">4.798</span>
 
 </div>
 
@@ -277,13 +277,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-4" class="collapsable-control">
       <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_553247997.png" download target="_blank">
+      <a href="embeddings/embedding_-1643927830.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-4" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_553247997.png">
+        <img src="embeddings/embedding_-1643927830.png">
       </div>
     </div>
   </div>
@@ -296,11 +296,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I login to the miro page with given credentials</span>
 
-  <span class="lead-duration duration">4.900</span>
+  <span class="lead-duration duration">5.081</span>
 
 </div>
 
@@ -308,6 +308,50 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;header-login-btn&quot;]/span&quot;}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-GQGAMQD', ip: '192.168.1.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:54548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 913ca1f09bf41e09afebdd7e961fc4b3
+*** Element info: {Using=xpath, value=//*[@id=&quot;header-login-btn&quot;]/span}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy22.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at com.miro.whiteboard.steps.HomePageSteps.loginPage(HomePageSteps.java:51)
+	at &#10045;.I login to the miro page with given credentials(file:///C:/Thani/workspace/sample_framework/miro/src/test/resources/features/e2e/miro-sticker-create-validation.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -325,21 +369,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-5" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_1145938057.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-5" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_1145938057.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -348,11 +377,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I create a new white miro board</span>
 
-  <span class="lead-duration duration">51.468</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -366,47 +395,7 @@ $(document).ready(function() {
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-6">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-6" class="collapse collapsable-details " >
-          
-          <pre><p>New white board - Board is created</p></pre>
-        </div>
-      </div>
-  </div>
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-7" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-1158436480.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-7" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-1158436480.png">
-      </div>
-    </div>
-  </div>
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-8" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_458449026.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-8" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_458449026.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -415,11 +404,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I create sticker widget</span>
 
-  <span class="lead-duration duration">20.130</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -434,21 +423,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-9" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-15258711.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-9" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-15258711.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -457,11 +431,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I share the miro board</span>
 
-  <span class="lead-duration duration">2.493</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -475,34 +449,7 @@ $(document).ready(function() {
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-10">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-10" class="collapse collapsable-details " >
-          
-          <pre><p>The url to be sharded with another user is https://miro.com/welcomeonboard/eVdMOGQ0cjhWZENHWGd5ZVRQTUVPSXp0dU5TaVZaTGQ4RE43YnU3UEhTekZwUXVmNXlrVnFtemtSREJ0VXFiUnwzMDc0NDU3MzYyNjI2MTE3NTQ2</p></pre>
-        </div>
-      </div>
-  </div>
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-11" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-926406870.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-11" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-926406870.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -511,11 +458,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I logout from the miro application</span>
 
-  <span class="lead-duration duration">2.366</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -530,21 +477,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-12" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_1649605151.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-12" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_1649605151.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -553,11 +485,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
   <span class="name">I navigate to shared url to the miro page with given credentials</span>
 
-  <span class="lead-duration duration">3.304</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -582,21 +514,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-13" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_1517135920.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-13" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_1517135920.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -605,11 +522,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I verify if the sticker widget is present and <span class="argument">&quot;valid&quot;</span> validated</span>
 
-  <span class="lead-duration duration">13.676</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -623,47 +540,7 @@ $(document).ready(function() {
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-14">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-14" class="collapse collapsable-details " >
-          
-          <pre><p>diffImage is false</p><p>diffImage is 1530</p></pre>
-        </div>
-      </div>
-  </div>
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-15" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-1275249234.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-15" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-1275249234.png">
-      </div>
-    </div>
-  </div>
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-16" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-1660059660.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-16" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-1660059660.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -676,7 +553,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-17">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -688,13 +565,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-17" class="inner-level collapse collapsable-details ">
+    <div id="after-6" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">com.miro.whiteboard.steps.Setup.teardown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">2.545</span>
+  <span class="lead-duration duration">1.181</span>
 
           </div>
 
@@ -703,6 +580,21 @@ $(document).ready(function() {
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-7" class="collapsable-control">
+      <a>validate miro board sticker creation for multiple users</a>
+      <a href="embeddings/embedding_-1643927830.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-7" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1643927830.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -727,14 +619,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2:6.929</span>
+  <span class="lead-duration duration">8.375</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-18">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
-  <span class="name">validate miro board sticker creation for multiple users</span>
+  <span class="name">validate miro board multiple sticker creation for multiple users</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -743,11 +635,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-18" class="collapse collapsable-details ">
+  <div id="element-8" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-19">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-9">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -759,13 +651,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-19" class="inner-level collapse collapsable-details ">
+    <div id="before-9" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
               <span class="location name">com.miro.whiteboard.steps.Setup.setup(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">2.888</span>
+  <span class="lead-duration duration">2.075</span>
 
           </div>
 
@@ -782,9 +674,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-20">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-10">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -794,7 +686,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-20" class="inner-level collapse collapsable-details ">
+  <div id="steps-10" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -802,7 +694,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">I navigate to the miro page</span>
 
-  <span class="lead-duration duration">5.451</span>
+  <span class="lead-duration duration">3.295</span>
 
 </div>
 
@@ -819,15 +711,15 @@ $(document).ready(function() {
 
   <div class="embeddings inner-level">
   <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-21" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_698418227.png" download target="_blank">
+    <div data-toggle="collapse" data-target="#embedding-11" class="collapsable-control">
+      <a>validate miro board multiple sticker creation for multiple users</a>
+      <a href="embeddings/embedding_-1643927830.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
-    <div id="embedding-21" class="collapse collapsable-details ">
+    <div id="embedding-11" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_698418227.png">
+        <img src="embeddings/embedding_-1643927830.png">
       </div>
     </div>
   </div>
@@ -840,11 +732,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I login to the miro page with given credentials</span>
 
-  <span class="lead-duration duration">4.791</span>
+  <span class="lead-duration duration">5.064</span>
 
 </div>
 
@@ -852,6 +744,50 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;header-login-btn&quot;]/span&quot;}
+  (Session info: chrome=94.0.4606.81)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-GQGAMQD', ip: '192.168.1.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:55960}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a76fd8190c315b716b3f64da686bf47
+*** Element info: {Using=xpath, value=//*[@id=&quot;header-login-btn&quot;]/span}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy22.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at com.miro.whiteboard.steps.HomePageSteps.loginPage(HomePageSteps.java:51)
+	at &#10045;.I login to the miro page with given credentials(file:///C:/Thani/workspace/sample_framework/miro/src/test/resources/features/e2e/miro-sticker-create-validation.feature:27)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -869,21 +805,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-22" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-1623438713.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-22" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-1623438713.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -892,11 +813,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I create a new white miro board</span>
 
-  <span class="lead-duration duration">50.695</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -910,47 +831,7 @@ $(document).ready(function() {
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-23">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-23" class="collapse collapsable-details " >
-          
-          <pre><p>New white board - Board is created</p></pre>
-        </div>
-      </div>
-  </div>
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-24" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-1152330254.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-24" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-1152330254.png">
-      </div>
-    </div>
-  </div>
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-25" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_458449026.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-25" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_458449026.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -959,11 +840,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I create sticker widget</span>
 
-  <span class="lead-duration duration">19.235</span>
+  <span class="lead-duration duration">0.015</span>
 
 </div>
 
@@ -978,21 +859,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-26" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_1577287972.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-26" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_1577287972.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -1001,11 +867,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I share the miro board</span>
 
-  <span class="lead-duration duration">2.287</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1019,34 +885,7 @@ $(document).ready(function() {
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-27">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-27" class="collapse collapsable-details " >
-          
-          <pre><p>The url to be sharded with another user is https://miro.com/welcomeonboard/TkdzcUZmUklKTThaYUJpUnI2MXdkb3NpVUluMXpnTDJDaFkxZXBERkxrMnhFaVAxdUxGY0lhaDhQSDZhQ1VQb3wzMDc0NDU3MzYyNjI2MTE3NTQ2</p></pre>
-        </div>
-      </div>
-  </div>
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-28" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-1932914465.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-28" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-1932914465.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -1055,11 +894,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I logout from the miro application</span>
 
-  <span class="lead-duration duration">4.441</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1074,21 +913,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-29" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_-1975368771.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-29" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_-1975368771.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -1097,11 +921,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
   <span class="name">I navigate to shared url to the miro page with given credentials</span>
 
-  <span class="lead-duration duration">3.760</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1126,21 +950,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-30" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_2008948107.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-30" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_2008948107.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -1149,11 +958,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I create additional sticker widget</span>
 
-  <span class="lead-duration duration">18.609</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1168,21 +977,6 @@ $(document).ready(function() {
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-31" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_97661362.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-31" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_97661362.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -1191,11 +985,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I verify if the sticker widget is present and <span class="argument">&quot;invalid&quot;</span> validated</span>
 
-  <span class="lead-duration duration">17.655</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1209,47 +1003,7 @@ $(document).ready(function() {
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-32">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-32" class="collapse collapsable-details " >
-          
-          <pre><p>diffImage is true</p><p>diffImage is 41733</p></pre>
-        </div>
-      </div>
-  </div>
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-33" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_1916698087.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-33" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_1916698087.png">
-      </div>
-    </div>
-  </div>
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-34" class="collapsable-control">
-      <a>validate miro board sticker creation for multiple users</a>
-      <a href="embeddings/embedding_1211098416.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-34" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_1211098416.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
 
 
@@ -1262,7 +1016,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-35">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-13">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1274,13 +1028,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-35" class="inner-level collapse collapsable-details ">
+    <div id="after-13" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">com.miro.whiteboard.steps.Setup.teardown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">1.195</span>
+  <span class="lead-duration duration">1.088</span>
 
           </div>
 
@@ -1289,6 +1043,21 @@ $(document).ready(function() {
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-14" class="collapsable-control">
+      <a>validate miro board multiple sticker creation for multiple users</a>
+      <a href="embeddings/embedding_-1643927830.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-14" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1643927830.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>

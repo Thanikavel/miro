@@ -25,7 +25,7 @@ public class Setup {
         if (props == null) {
             props = new CommonUtil().readPropertiesFile(propertiesFileName);
         }
-        baseUrl = props.getProperty("miro.baseurl");
+        baseUrl = props.getProperty("testscript.baseurl");
         System.out.println("baseUrl = " + baseUrl);
     }
 

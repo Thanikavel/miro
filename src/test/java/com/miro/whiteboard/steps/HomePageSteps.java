@@ -21,71 +21,48 @@ public class HomePageSteps {
     private final HomePage page = new HomePage();
     private String shareUrl;
 
-    @Given("I navigate to the miro page")
-    public void navigateToMiro() {
+    @Given("I navigate to the e-shopping cart home page")
+    public void navigateToHomePage() {
         String url = Setup.baseUrl;
         commonUtil.navigateToUrl(Setup.baseUrl);
         assertEquals(url, HomePage.driver.getCurrentUrl());
         CommonUtil.takeScreenShot(HomePage.scenario);
     }
 
-    @When("I login to the miro page with given credentials")
-    public void loginPage(DataTable dataTable) throws InterruptedException {
-        String userEmailId = dataTable.asMaps().get(0).get("userEmailId");
-        String password = dataTable.asMaps().get(0).get("password");
-        page.wait.until(ExpectedConditions.visibilityOf(page.getSignIn()));
-        page.getSignIn().click();
-        page.loginToMiro(userEmailId, password);
+    @Given("I add {string} different products to my wish list")
+    public void addProductsToWishList(String noOfProduct) throws InterruptedException {
+        System.out.println("noOfProduct = " + noOfProduct);
+        page.addProductToWishList();
         CommonUtil.takeScreenShot(HomePage.scenario);
     }
 
-    @Then("I create a new white miro board")
-    public void createNewBoard() throws InterruptedException, IOException, UnsupportedFlavorException {
-        page.createMiroBoard();
+    @When("I view my wishlist table")
+    public void wishListTable() throws InterruptedException {
+        page.wishListTable();
         CommonUtil.takeScreenShot(HomePage.scenario);
     }
 
-    @Then("I create sticker widget")
-    public void createNewStickyNotes() throws InterruptedException, IOException, UnsupportedFlavorException {
-        page.createNewStickyNotes(200, 60, false);
+    @When("I find total four selected items in my wishlist")
+    public void wishListCount() throws InterruptedException {
+        page.wishListCount();
         CommonUtil.takeScreenShot(HomePage.scenario);
     }
 
-    @And("I share the miro board")
-    public void shareMiroBoard() throws IOException, UnsupportedFlavorException {
-        shareUrl = page.shareMiroBoard();
+    @When("I search for lowest price product")
+    public void searchLowestPrice() throws InterruptedException {
+        page.searchLowestPrice();
         CommonUtil.takeScreenShot(HomePage.scenario);
     }
 
-    @Then("I logout from the miro application")
-    public void logoutMiro() throws InterruptedException {
-        page.logoutMiro();
+    @When("I am able to add the lowest price item to my cart")
+    public void addLowestToCart() throws InterruptedException {
+        page.addLowestToCart();
         CommonUtil.takeScreenShot(HomePage.scenario);
     }
 
-    @When("I navigate to shared url to the miro page with given credentials")
-    public void loginMiroPage(DataTable dataTable) throws InterruptedException {
-        String userEmailId = dataTable.asMaps().get(0).get("secondUserEmailId");
-        String password = dataTable.asMaps().get(0).get("secondUserPassword");
-        commonUtil.navigateToUrl(shareUrl);
-        page.loginToMiro(userEmailId, password);
-        CommonUtil.takeScreenShot(HomePage.scenario);
-    }
-
-    @Then("I create additional sticker widget")
-    public void createAdditionalStickyNotes() throws IOException {
-        page.createNewStickyNotes(400, 60, true);
-        CommonUtil.takeScreenShot(HomePage.scenario);
-    }
-
-    @Then("I verify if the sticker widget is present and {string} validated")
-    public void verifyStickerWidget(String valid) throws IOException {
-        Boolean hasDiff = page.validateStickyNotes();
-        if (valid.equalsIgnoreCase("valid")) {
-            Assert.assertFalse("Visual differences found!", hasDiff);
-        } else {
-            Assert.assertTrue("Visual differences not found!", hasDiff);
-        }
+    @When("I am able to verify the item in my cart")
+    public void verifyItemInCart() throws InterruptedException {
+        page.verifyItemInCart();
         CommonUtil.takeScreenShot(HomePage.scenario);
     }
 }

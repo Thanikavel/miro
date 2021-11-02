@@ -87,6 +87,18 @@ public class CommonUtil {
      * @param element to be validated is passed as input
      * @param actions - to pass the action reference
      */
+    public void validateCookie(WebElement element, Actions actions) {
+        if (isElementPresent(element)) {
+            actions.click(element).build().perform();
+        }
+    }
+
+    /**
+     * To check if the pop is present and if present action is preformed on that element
+     *
+     * @param element to be validated is passed as input
+     * @param actions - to pass the action reference
+     */
     public void validatePopUp(WebElement element, Actions actions) {
         if (isElementPresent(element)) {
             actions.click(element).build().perform();
