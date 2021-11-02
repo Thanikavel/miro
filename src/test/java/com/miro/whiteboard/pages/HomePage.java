@@ -1,6 +1,7 @@
 package com.miro.whiteboard.pages;
 
 import com.miro.whiteboard.utils.CommonUtil;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -147,7 +148,7 @@ public class HomePage extends BasePage {
     /**
      * to perform action for creating new board
      */
-    public void wishListCount() throws InterruptedException {
+    public void wishListCount() {
         int columns_count = wishListTotalElements.size();
         System.out.println("Number of cells In Row are "+columns_count);
 
@@ -156,89 +157,31 @@ public class HomePage extends BasePage {
     /**
      * to perform action for creating new board
      */
-//    public void searchLowestPrice() throws InterruptedException {
-//        int columns_count = wishListTotalElements.size();
-//        System.out.println("Number of cells In Row are "+columns_count);
-//        Integer value1 = 0, value2 = 0, tempLowestPrice = 0, lowestPrice = 0;
-//        String regex = ".00";
-//        // split the string object
-//        String[] output = item01.split(regex);
-//
-////        findLowestPrice(output[0], output[1], lowestPrice, tempLowestPrice, "AddToCart1");
-//        String substring1 = output[0].length() > 2 ? output[0].substring(output[0].length() - 2) : output[0];
-//        String substring2 = output[1].length() > 2 ? output[1].substring(output[1].length() - 2) : output[1];
-//        productName = output[0].substring(0,output[0].length() - 4);
-//        value1 = Integer.parseInt(substring1);
-//        value2 = Integer.parseInt(substring2);
-//        lowestPrice = value1 < value2 ? value1 : value2;
-//        tempLowestPrice = lowestPrice;
-//        methodToCall = "AddToCart1";
-//
-////        regex = ".00";
-//        // split the string object
-//        output = item02.split(regex);
-//        lowestPrice = findLowestPrice(output[0], output[1], lowestPrice, tempLowestPrice, "AddToCart2");
-//
-//        output = item03.split(regex);
-//        lowestPrice = findLowestPrice(output[0], output[1], lowestPrice, tempLowestPrice, "AddToCart3");
-//
-//        output = item04.split(regex);
-//        lowestPrice = findLowestPrice(output[0], output[1], lowestPrice, tempLowestPrice, "AddToCart4");
-//
-//        System.out.println(lowestPrice);
-//        System.out.println(methodToCall);
-//
-//    }
-
-    /**
-     * to perform action for creating new board
-     */
-    public void searchLowestPrice() throws InterruptedException {
-        int columns_count = wishListTotalElements.size();
-        System.out.println("Number of cells In Row are "+columns_count);
+    public void searchLowestPrice() {
         Integer value1 = 0;
         Integer value2 = 0;
         Integer tempLowestPrice = 0;
         Integer lowestPrice = 0;
         String regex = ".00";
-        // split the string object
         String[] output = item01.split(regex);
         String substring1 = output[0].length() > 2 ? output[0].substring(output[0].length() - 2) : output[0];
         String substring2 = output[1].length() > 2 ? output[1].substring(output[1].length() - 2) : output[1];
         productName = output[0].substring(0,output[0].length() - 4);
-        System.out.println("Name:"+output[0]);
-        System.out.println("Age:"+output[1]);
-        System.out.println("Country:"+output[2]);
-        System.out.println("substring1:"+substring1);
-        System.out.println("substring2:"+substring2);
         value1 = Integer.parseInt(substring1);
         value2 = Integer.parseInt(substring2);
         lowestPrice = value1 < value2 ? value1 : value2;
         tempLowestPrice = lowestPrice;
         methodToCall = "AddToCart1";
-        System.out.println("tempLowestPrice:"+tempLowestPrice);
-        System.out.println("methodToCall:"+methodToCall);
-//        if(lowestPrice != tempLowestPrice){
-//            methodToCall = "AddToCart2";
-//            tempLowestPrice = lowestPrice;
-//        }
 
         regex = ".00";
         // split the string object
         output = item02.split(regex);
         substring1 = output[0].length() > 2 ? output[0].substring(output[0].length() - 2) : output[0];
         substring2 = output[1].length() > 2 ? output[1].substring(output[1].length() - 2) : output[1];
-        System.out.println("Name:"+output[0]);
-        System.out.println("Age:"+output[1]);
-        System.out.println("Country:"+output[2]);
-        System.out.println("substring1:"+substring1);
-        System.out.println("substring2:"+substring2);
         value1 = Integer.parseInt(substring1);
         value2 = Integer.parseInt(substring2);
         lowestPrice = value1 < lowestPrice ? value1 : lowestPrice;
         lowestPrice = value2 < lowestPrice ? value2 : lowestPrice;
-        System.out.println("tempLowestPrice:"+tempLowestPrice);
-        System.out.println("lowestPrice:"+lowestPrice);
         if(lowestPrice != tempLowestPrice){
             productName = output[0].substring(0,output[0].length() - 4);
             methodToCall = "AddToCart2";
@@ -251,11 +194,6 @@ public class HomePage extends BasePage {
         output = item03.split(regex);
         substring1 = output[0].length() > 2 ? output[0].substring(output[0].length() - 2) : output[0];
         substring2 = output[1].length() > 2 ? output[1].substring(output[1].length() - 2) : output[1];
-        System.out.println("Name:"+output[0]);
-        System.out.println("Age:"+output[1]);
-        System.out.println("Country:"+output[2]);
-        System.out.println("substring1:"+substring1);
-        System.out.println("substring2:"+substring2);
         value1 = Integer.parseInt(substring1);
         value2 = Integer.parseInt(substring2);
         lowestPrice = value1 < lowestPrice ? value1 : lowestPrice;
@@ -278,8 +216,6 @@ public class HomePage extends BasePage {
         value2 = Integer.parseInt(substring2);
         lowestPrice = value1 < lowestPrice ? value1 : lowestPrice;
         lowestPrice = value2 < lowestPrice ? value2 : lowestPrice;
-        System.out.println("tempLowestPrice:"+tempLowestPrice);
-        System.out.println("lowestPrice:"+lowestPrice);
         if(lowestPrice != tempLowestPrice){
             productName = output[0].substring(0,output[0].length() - 4);
             methodToCall = "AddToCart4";
@@ -336,11 +272,12 @@ public class HomePage extends BasePage {
     public void verifyItemInCart() throws InterruptedException {
         this.cart();
         CommonUtil.takeScreenShot(HomePage.scenario);
-        System.out.println("thani : " + new CartSummaryPage().getProductName());
+        System.out.println(new CartSummaryPage().getProductName());
         CommonUtil.takeScreenShot(HomePage.scenario);
         int columns_count = cartTotalElements.size();
         System.out.println("Number of cells In Row are "+columns_count);
         System.out.println(productName);
+        Assert.assertEquals(productName,new CartSummaryPage().getProductName());
 
     }
 
